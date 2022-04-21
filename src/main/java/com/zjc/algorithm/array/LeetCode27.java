@@ -7,6 +7,15 @@ package com.zjc.algorithm.array;
  * @description : 移除给定的数组中的元素
  */
 public class LeetCode27 {
+    //    public int removeElement(int[] nums, int val) {
+//        int slowIndex = 0;
+//        for (int i = 0; i < nums.length; i++) {
+//            if (val != nums[i]) {
+//                nums[slowIndex++] = nums[i];
+//            }
+//        }
+//        return slowIndex;
+//    }
     public int removeElement(int[] nums, int val) {
         int slowIndex = 0;
         for (int i = 0; i < nums.length; i++) {
