@@ -22,7 +22,7 @@ public class LeetCode142 {
             if (fast == slow) {
                 slow = head;
                 while (slow != fast) {
-                    slow =slow.next;
+                    slow = slow.next;
                     fast = fast.next;
                 }
                 return slow;

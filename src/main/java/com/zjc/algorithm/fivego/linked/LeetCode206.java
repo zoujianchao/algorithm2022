@@ -15,10 +15,24 @@ public class LeetCode206 {
         while (cur != null) {
             temp = cur.next;
             cur.next = pre;
-
             pre = cur;
             cur = temp;
         }
         return pre;
     }
 }
+
+
+
+//    ListNode temp = null;
+//    ListNode pre = null;
+//    ListNode cur = head;
+//
+//        while (cur != null) {
+//                temp = cur.next;
+//                cur.next = pre;
+//
+//                pre = cur;
+//                cur = temp;
+//                }
+//                return pre;
