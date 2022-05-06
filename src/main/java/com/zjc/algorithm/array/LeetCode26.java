@@ -1,5 +1,8 @@
 package com.zjc.algorithm.array;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author : zoujianchao
  * @version : 1.0
@@ -37,5 +40,9 @@ public class LeetCode26 {
         }
         return p + 1;
     }
-    
+
+    public static void main(String[] args) {
+        Map<String, String> map = new HashMap<>();
+        map.put("ok", "ko");
+    }
 }
