@@ -1,4 +1,5 @@
-package com.zjc.algorithm.tree;
+package com.zjc.algorithm.fivego.tree;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +8,7 @@ import java.util.Stack;
 /**
  * @author : zoujianchao
  * @version : 1.0
- * @date : 2022/3/25
+ * @date : 2022/5/9
  * @description : 二叉树前序遍历 根左右
  */
 public class LeetCode144 {
@@ -16,7 +17,7 @@ public class LeetCode144 {
         preorder(root, list);
         return list;
     }
-
+    
     public static void preorder(TreeNode root, List<Integer> res) {
         if (root == null) {
             return;
@@ -26,7 +27,6 @@ public class LeetCode144 {
         preorder(root.right, res);
     }
     
-    //非递归
     public List<Integer> preorderTraversal0(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         if (root == null) {
