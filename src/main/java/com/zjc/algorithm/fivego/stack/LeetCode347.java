@@ -68,4 +68,35 @@ public class LeetCode347 {
         }
         return res;
     }
+
+    public int[] topKFrequent1(int[] nums, int k) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
+        }
+
+        PriorityQueue<Integer> queue = new PriorityQueue<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer a, Integer b) {
+                return map.get(a) - map.get(b);
+            }
+        });
+
+        for (Integer key : map.keySet()) {
+            if (queue.size() < k) {
+                queue.add(key);
+            }else if (map.get(key) > map.get(queue.peek())) {
+                queue.remove();
+                queue.add(key);
+            }
+        }
+
+        int[] res = new int[k];
+        int index = 0;
+        while (!queue.isEmpty()) {
+            res[index++] = queue.remove();
+        }
+
+        return res;
+    }
 }

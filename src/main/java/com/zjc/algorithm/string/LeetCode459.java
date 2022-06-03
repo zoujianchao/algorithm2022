@@ -13,6 +13,6 @@ public class LeetCode459 {
     }
     
     public static void main(String[] args) {
-        repeatedSubstringPattern("abab"); 
+        System.out.println(repeatedSubstringPattern("ab"));
     }
 }

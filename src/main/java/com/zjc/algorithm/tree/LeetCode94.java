@@ -11,20 +11,20 @@ import java.util.Stack;
  * @description : 二叉树中序遍历
  */
 public class LeetCode94 {
-//    public List<Integer> inorderTraversal(TreeNode root) {
-//        List<Integer> list = new ArrayList<>();
-//        inorder(root, list);
-//        return list;
-//    }
-//
-//    public static void inorder(TreeNode root, List<Integer> res) {
-//        if (root == null) {
-//            return;
-//        }
-//        inorder(root.left, res);
-//        res.add(root.val);
-//        inorder(root.right, res);
-//    }
+    public List<Integer> inorderTraversal0(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        inorder(root, list);
+        return list;
+    }
+
+    public static void inorder(TreeNode root, List<Integer> res) {
+        if (root == null) {
+            return;
+        }
+        inorder(root.left, res);
+        res.add(root.val);
+        inorder(root.right, res);
+    }
     
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();

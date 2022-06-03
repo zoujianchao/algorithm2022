@@ -73,4 +73,35 @@ public class LeetCode203 {
         }
         return head;
     }
+
+    public ListNode removeElements5(ListNode head, int val) {
+        if (head == null) {
+            return head;
+        }
+        head.next = removeElements5(head.next, val);
+        if (head.val == val){
+            return head.next;
+        }else {
+            return head;
+        }
+    }
+
+    public ListNode removeElements6(ListNode head, int val) {
+        while (head != null && head.val == val) {
+            head = head.next;
+        }
+
+        if (head == null) {
+            return head;
+        }
+        ListNode pre = head;
+        while (pre.next != null){
+            if (pre.next.val == val) {
+                pre.next = pre.next.next;
+            }else {
+                pre = pre.next;
+            }
+        }
+        return head;
+    }
 }

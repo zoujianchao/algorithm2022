@@ -1,19 +1,20 @@
-package com.zjc.algorithm.fivego.stack;
+package com.zjc.algorithm.external;
 
 import java.util.Stack;
 
 /**
  * @author : zoujianchao
  * @version : 1.0
- * @date : 2022/5/7
- * @description : 20. 有效的括号
+ * @date : 2022/5/18 11:37
+ * @description :
  */
-public class LeetCode20 {
-    public boolean isValid(String s) {
+public class HuaweiTest {
+    public static boolean isValid(String s) {
         if (s.length() % 2 == 1) {
             return false;
         }
         Stack<Character> stack = new Stack<>();
+
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(') {
                 stack.push(')');
@@ -27,10 +28,11 @@ public class LeetCode20 {
                 stack.pop();
             }
         }
-        return stack.isEmpty();
+        return true;
     }
 
     public static void main(String[] args) {
-        System.out.println("邹建超".length());
+        System.out.println(isValid("(]"));
+        System.out.println(isValid("()[]{}"));
     }
 }
