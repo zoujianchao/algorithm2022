@@ -1,4 +1,4 @@
-package com.zjc.algorithm.external;
+package com.zjc.algorithm.test;
 
 import java.util.Stack;
 
@@ -8,7 +8,7 @@ import java.util.Stack;
  * @date : 2022/5/18 11:37
  * @description :
  */
-public class HuaweiTest {
+public class HuaweiTest0 {
     public static boolean isValid(String s) {
         if (s.length() % 2 == 1) {
             return false;
