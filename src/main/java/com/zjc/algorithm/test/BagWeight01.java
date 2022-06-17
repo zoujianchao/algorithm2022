@@ -7,7 +7,7 @@ package com.zjc.algorithm.test;
  * @description : 背包问题01
  * https://github.com/zoujianchao/leetcode-master/blob/master/problems/%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001%E8%83%8C%E5%8C%85-2.md
  */
-public class BigWeight01 {
+public class BagWeight01 {
     
     /**
      * @param weight    物品重量
