@@ -1,22 +1,14 @@
-package com.zjc.algorithm.greedy;
+package com.zjc.algorithm.test;
 
 /**
  * @author : zoujianchao
  * @version : 1.0
- * @date : 2022/6/7 22:29
+ * @date : 2022/6/28 23:13
  * @description : 122. 买卖股票的最佳时机 II
  */
-public class LeetCode122 {
-    public int maxProfit(int[] prices) {
-        int res = 0;
-        for (int i = 1; i < prices.length; i++) {
-            res+=Math.max(prices[i]-prices[i-1], 0);
-        }
-        return res;
-    }
-
+public class LeetCode122  {
     //贪心
-    public int maxProfit1(int[] prices) {
+    public int maxProfit(int[] prices) {
         int res = 0;
         int sum = 0;
         for (int i = 1; i < prices.length; i++) {
@@ -27,7 +19,7 @@ public class LeetCode122 {
         return sum;
     }
     //动态规划
-    public int maxProfit2(int[] prices) {
+    public int maxProfit1(int[] prices) {
         int[][] dp = new int[prices.length][2];
         dp[0][1] = -prices[0];
         dp[0][0] = 0;
