@@ -8,13 +8,20 @@ package com.zjc.algorithm.dp;
  */
 public class LeetCode53 {
     public int maxSubArray(int[] nums) {
+        if (nums.length < 1) {
+            return 0;
+        }
+
+        int[] dp = new int[nums.length];
+        dp[0] = nums[0];
         int max = Integer.MIN_VALUE;
-        int sum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            sum+=nums[i];
-            max = Math.max(sum, max);
-            if (sum < 0) {
-                sum = 0;
+        for (int i = 1; i < nums.length; i++) {
+            dp[i] = Math.max(dp[i - 1] + nums[i], nums[i]);
+        }
+
+        for (int i = 0; i < dp.length; i++) {
+            if (dp[i] > max) {
+                max = dp[i];
             }
         }
         return max == Integer.MIN_VALUE ? 0 : max;
