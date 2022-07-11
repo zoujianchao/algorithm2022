@@ -7,17 +7,17 @@ package com.zjc.algorithm.test;
  * @description :
  */
 public class LeetCode6116 {
-    public boolean evaluateTree(TreeNode root) {
-        if (root.left == null && root.right == null) {
-            return root.val > 0;
-        }
-
-        return switch (root.val) {
-            case 2 -> evaluateTree(root.left) || evaluateTree(root.right);
-            case 3 -> evaluateTree(root.left) && evaluateTree(root.right);
-            default -> false;
-        };
-    }
+//    public boolean evaluateTree(TreeNode root) {
+//        if (root.left == null && root.right == null) {
+//            return root.val > 0;
+//        }
+//
+//        return switch (root.val) {
+//            case 2 -> evaluateTree(root.left) || evaluateTree(root.right);
+//            case 3 -> evaluateTree(root.left) && evaluateTree(root.right);
+//            default -> false;
+//        };
+//    }
 }
 
 class TreeNode {

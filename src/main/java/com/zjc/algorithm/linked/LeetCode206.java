@@ -71,4 +71,36 @@ public class LeetCode206 {
         }
         return pre;
     }
+
+    // 双指针
+    public ListNode reverseList6(ListNode head) {
+        ListNode curr = head;
+        ListNode pre = null;
+
+        while (curr != null) {
+            ListNode temp = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = temp;
+        }
+
+        return pre;
+    }
+
+    // 递归
+    public ListNode reverseList7(ListNode head) {
+        return recursive(head, null);
+    }
+
+    private ListNode recursive(ListNode curr, ListNode pre) {
+        if (curr == null) {
+            return pre;
+        }
+
+        ListNode temp = curr.next;
+        curr.next = pre;
+
+        return recursive(temp, curr);
+    }
+
 }
